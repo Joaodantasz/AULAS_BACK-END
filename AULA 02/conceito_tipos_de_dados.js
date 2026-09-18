@@ -12,3 +12,24 @@
 // 7. Symbol (símbolo)
 // 8. Array (lista de valores)
 
+// STRINGS (Textos)
+// uma string é um texto, que pode ser definido entre aspas simples, aspas duplas ou crases. As strings podem conter letras, números, símbolos e espaços.
+let nome = "Jarvis"
+let mensagem = 'Bregião rei do mega brain'
+
+console.log(nome)
+console.log(mensagem)
+
+let saudacao = "olá, " + nome + "!"
+console.log(saudacao)
+
+// typeof é um operador que retorna o tipo de dado de uma variável
+
+console.log(typeof nome)
+console.log(typeof mensagem)
+console.log(typeof saudacao)
+
+let soma = 10 + 5
+console.log(soma)
+console.log(typeof soma)
+
