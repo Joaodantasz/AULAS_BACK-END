@@ -10,3 +10,5 @@ console.log(anoNascimento);
 
 let idade = anoAtual - anoNascimento;
 console.log(idade); 
+
+console.log("A sua idade é " + idade + " anos.");

@@ -33,3 +33,13 @@ let soma = 10 + 5
 console.log(soma)
 console.log(typeof soma)
 
+// Boolean (verdadeiro ou falso)
+let maiorDeIdade = true
+let menorDeIdade = false
+
+console.log(maiorDeIdade) // exibe true
+console.log(menorDeIdade)// exibe false
+
+let idade = 20
+let podeDirigir = idade >= 18
+console.log(podeDirigir)
