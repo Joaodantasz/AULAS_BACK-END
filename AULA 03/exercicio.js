@@ -90,11 +90,4 @@ let conta = {
     turma: "DS 2",
     idade: "18"
 }
-console.log(`Nome do usuário = ${conta.usuario}
-Nome completo = ${conta.nome}
-E-mail = ${conta.email}
-Curso = ${conta.curso}
-Turma = ${conta.turma}
-Idade = ${conta.idade}
-Nível de acesso = ${conta.nivel}
-Senha = ${conta.senha}`)
+console.log(`O usuário ${conta.usuario} de ${conta.idade} anos, está matriculado no curso de ${conta.curso}, turma ${conta.turma}. Seu nível de acesso é ${conta.nivel} e seu e-mail é ${conta.email}. A senha cadastrada é ${conta.senha}.`)
