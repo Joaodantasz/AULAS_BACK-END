@@ -129,3 +129,14 @@ app.get("/api/cachorros/:raca", (req, res) => {
     });
 
 });
+
+//====================================
+// INICIA O SERVIDOR
+//====================================
+
+//inicia o servidor
+app.listen(PORT, () => {
+    console.log(`🚀 Servidor rodando em http://localhost:${PORT}`);
+    console.log(`📁 coloque as fotos manualmente em: data/fotos/`);
+    
+})
