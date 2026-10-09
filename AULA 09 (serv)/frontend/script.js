@@ -113,3 +113,9 @@ async function buscaCachorro(url) {
         dogArea.classList.remove("loading");
     }
 }
+
+// =====================================
+// AÇÕES
+// =====================================
+
+// quando o usuário clicar no botão de cachorro aleatório
