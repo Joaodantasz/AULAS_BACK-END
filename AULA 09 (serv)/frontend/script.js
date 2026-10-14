@@ -37,7 +37,7 @@ const API = "http://localhost:3000/api/cachorros";
 // FUNÇÃO PRINCIPAL
 // =====================================
 
-async function buscaCachorro(url) {
+async function buscarCachorro(url) {
     // adiciona a classe "loading"
     // normalmente usada para mostrar animação de carregamento
     dogArea.classList.add("loading");
@@ -118,4 +118,55 @@ async function buscaCachorro(url) {
 // AÇÕES
 // =====================================
 
-// quando o usuário clicar no botão de cachorro aleatório
+// função que busca o cachorro aleatório
+function cachorroAleatorio(){
+    // chamar a função principal
+    //passando a rota/aleatorio da API
+    buscarCachorro(`${API}/aleatorio`);
+}
+
+// função que busca cachorro por raça
+function buscarPorRaca(){
+    // pegar o texto digitado no input
+    // Trim ele remove os espaços em branco {trim()} do inicio e do fim do texto
+    const raca = breedInput.value.trim().toLowerCase();
+
+    // verificar se o usuário digitou algo
+    if (!raca) {
+    // se não digitou, mostra alerta
+    alert("Digite uma raça")
+    // interrompe a função
+    return;
+    }
+
+    // chamar API passando a raça na URL
+    // exemplo: /api/cachorros/husky
+    buscarCachorro(`${API}/${raca}`)
+}
+
+// =====================================
+// EVENTOS
+// =====================================
+
+// quando clicar no botão "aleatorio"
+randomBtn.addEventListener("click", cachorroAleatorio)
+
+// quando clicar no botão "buscar"
+searchBtn.addEventListener("click", buscarPorRaca)
+
+// quando clicar na imagem do cachorro
+// carrega outro cachorro aleatorio
+dogImage.addEventListener("click", cachorroAleatorio)
+
+// quando usuário apertar o ENTER no input
+breedInput.addEventListener("keypress", (event) =>{
+    //verifica se a tecla pressionada foi enter
+    if (event.key === "Enter"){
+    // executa a busca por raça
+    buscarPorRaca();
+    }
+})
+
+// CARREGA AO ABRIR A PÁGINA
+
+cachorroAleatorio();
